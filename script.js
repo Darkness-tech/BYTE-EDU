@@ -1,34 +1,72 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+document.addEventListener('DOMContentLoaded', () => {
+  // Inisialisasi Ikon Lucide
+  lucide.createIcons();
 
-menuToggle.addEventListener("click", () => {
-  const open = navLinks.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", open);
-});
+  // 1. Dark Mode / Light Mode Toggle
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  
+  // Cek preferensi sistem atau localStorage
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+    themeIcon.setAttribute('data-lucide', 'sun');
+  } else {
+    document.documentElement.classList.remove('dark');
+    themeIcon.setAttribute('data-lucide', 'moon');
+  }
+  lucide.createIcons();
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-  });
-});
-
-const sections = document.querySelectorAll("main section[id], header[id]");
-const links = document.querySelectorAll(".nav-links a");
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      links.forEach(link => {
-        link.classList.toggle(
-          "active",
-          link.getAttribute("href") === "#" + entry.target.id
-        );
-      });
+  themeToggleBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    if (isDark) {
+      localStorage.theme = 'dark';
+      themeIcon.setAttribute('data-lucide', 'sun');
+    } else {
+      localStorage.theme = 'light';
+      themeIcon.setAttribute('data-lucide', 'moon');
     }
+    lucide.createIcons();
   });
-}, { rootMargin: "-35% 0px -55% 0px" });
 
-sections.forEach(section => observer.observe(section));
+  // 2. Mobile Nav Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-document.getElementById("year").textContent = new Date().getFullYear();
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Tutup menu seluler saat link diklik
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+
+  // 3. Project Filter Interaction
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Update status tombol aktif
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-brand-600', 'text-white', 'active');
+        b.classList.add('bg-slate-200', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+      });
+
+      btn.classList.remove('bg-slate-200', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+      btn.classList.add('bg-brand-600', 'text-white', 'active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      projectCards.forEach(card => {
+        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+});
