@@ -1,18 +1,294 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>DK | Guru Informatika</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio DK, Guru Informatika. Pembelajaran, inovasi, Computational Thinking, penelitian, dan publikasi.">
+  <title>DK | Guru Informatika</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <h1>DK</h1>
+  <header class="site-header" id="beranda">
+    <nav class="navbar container">
+      <a class="brand" href="#beranda" aria-label="Beranda DK">
+        <span class="brand-mark">DK</span>
+        <span class="brand-text">
+          <strong>DK</strong>
+          <small>Guru Informatika</small>
+        </span>
+      </a>
 
-    <h2>Guru Informatika</h2>
+      <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-    <p>
-        Selamat datang di portofolio digital saya.
-    </p>
+      <ul class="nav-links">
+        <li><a class="active" href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang Saya</a></li>
+        <li><a href="#pembelajaran">Pembelajaran</a></li>
+        <li><a href="#karya">Karya Inovasi</a></li>
+        <li><a href="#penelitian">Penelitian</a></li>
+        <li><a href="#publikasi">Publikasi</a></li>
+        <li><a href="#dokumentasi">Dokumentasi</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
 
+    <div class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> PORTOFOLIO DIGITAL</p>
+        <h1>Mengajar Informatika.<br><em>Menciptakan pembelajaran bermakna.</em></h1>
+        <p class="hero-text">
+          Saya adalah <strong>DK, Guru Informatika</strong> yang mengembangkan pembelajaran
+          melalui Computational Thinking, inovasi media, dan konteks kearifan lokal.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-dark" href="#karya">Lihat Karya <span>↗</span></a>
+          <a class="btn btn-light" href="#tentang">Tentang Saya</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Ilustrasi Computational Thinking">
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="hex hex-cyan">D</div>
+        <div class="hex hex-magenta">P</div>
+        <div class="hex hex-yellow">A</div>
+        <div class="hex hex-key">A</div>
+        <div class="core">
+          <span>CT</span>
+          <small>COMPUTATIONAL<br>THINKING</small>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section about" id="tentang">
+      <div class="container two-column">
+        <div>
+          <p class="eyebrow">01 — TENTANG SAYA</p>
+          <h2>Informatika yang dekat dengan kehidupan.</h2>
+        </div>
+        <div>
+          <p class="lead">
+            Saya percaya pembelajaran Informatika tidak harus selalu dimulai dari komputer.
+            Konsep dapat dipahami melalui permainan, aktivitas unplugged, lingkungan sekitar,
+            dan persoalan nyata.
+          </p>
+          <p>
+            Portofolio ini menjadi ruang untuk berbagi pembelajaran, karya inovasi,
+            penelitian, publikasi, dan dokumentasi perjalanan saya sebagai guru Informatika.
+          </p>
+        </div>
+      </div>
+
+      <div class="container focus-grid">
+        <article class="focus-card">
+          <span class="number">01</span>
+          <h3>Pembelajaran</h3>
+          <p>Perangkat, media, aktivitas, dan pengalaman belajar Informatika.</p>
+        </article>
+        <article class="focus-card">
+          <span class="number">02</span>
+          <h3>Computational Thinking</h3>
+          <p>Dekomposisi, pengenalan pola, abstraksi, dan algoritma dalam pembelajaran.</p>
+        </article>
+        <article class="focus-card">
+          <span class="number">03</span>
+          <h3>Inovasi</h3>
+          <p>Mengembangkan media pembelajaran yang kontekstual dan kreatif.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section learning" id="pembelajaran">
+      <div class="container section-heading">
+        <div>
+          <p class="eyebrow">02 — PEMBELAJARAN</p>
+          <h2>Ruang belajar Informatika.</h2>
+        </div>
+        <p>Beberapa bidang pembelajaran yang menjadi bagian dari praktik mengajar dan pengembangan media.</p>
+      </div>
+
+      <div class="container learning-grid">
+        <article class="topic-card cyan">
+          <span class="topic-icon">01</span>
+          <h3>Computational<br>Thinking</h3>
+          <p>Dekomposisi · Pola · Abstraksi · Algoritma</p>
+          <a href="#karya">Eksplorasi →</a>
+        </article>
+        <article class="topic-card magenta">
+          <span class="topic-icon">02</span>
+          <h3>Literasi<br>Digital</h3>
+          <p>Aktivitas belajar untuk membangun kecakapan digital.</p>
+          <a href="#dokumentasi">Lihat aktivitas →</a>
+        </article>
+        <article class="topic-card yellow">
+          <span class="topic-icon">03</span>
+          <h3>Jaringan<br>Komputer</h3>
+          <p>Jaringan, internet, konektivitas, dan konsep komunikasi digital.</p>
+          <a href="#dokumentasi">Lihat aktivitas →</a>
+        </article>
+        <article class="topic-card dark">
+          <span class="topic-icon">04</span>
+          <h3>Algoritma &<br>Pemrograman</h3>
+          <p>Logika, langkah penyelesaian masalah, dan pemrograman.</p>
+          <a href="#publikasi">Lihat materi →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section honey" id="karya">
+      <div class="container">
+        <p class="eyebrow">03 — KARYA INOVASI</p>
+        <div class="project">
+          <div class="project-art">
+            <div class="honeycomb">
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="project-label">HONEY-CODE</div>
+          </div>
+          <div class="project-content">
+            <p class="project-kicker">KARYA UNGGULAN</p>
+            <h2>Honey-Code:<br><em>The Rainforest Quest</em></h2>
+            <p>
+              Board game pembelajaran Informatika yang mengintegrasikan
+              <strong>Computational Thinking</strong> dengan kearifan lokal
+              <strong>madu hutan Mataiyang</strong>.
+            </p>
+            <div class="tag-list">
+              <span>Computational Thinking</span>
+              <span>Game-Based Learning</span>
+              <span>Kearifan Lokal</span>
+              <span>Etnokomputasi</span>
+            </div>
+            <a class="text-link" href="#penelitian">Jelajahi proyek →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section research" id="penelitian">
+      <div class="container">
+        <p class="eyebrow">04 — PENELITIAN</p>
+        <h2>Meneliti untuk memperbaiki praktik pembelajaran.</h2>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="year">2026</span>
+            <div>
+              <h3>Implementasi Computer Science Unplugged</h3>
+              <p>
+                Pengembangan pembelajaran Computational Thinking melalui
+                Board Game Honey-Code dalam konteks kearifan lokal.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="year">2026</span>
+            <div>
+              <h3>Etnokomputasi Berbasis Kearifan Lokal</h3>
+              <p>
+                Eksplorasi hubungan konsep Informatika dengan pengetahuan dan
+                praktik lokal madu hutan Mataiyang.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="year">—</span>
+            <div>
+              <h3>Penelitian & Pengembangan Berikutnya</h3>
+              <p>Ruang ini dapat diisi dengan penelitian, PTK, atau pengembangan media berikutnya.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section publications" id="publikasi">
+      <div class="container section-heading">
+        <div>
+          <p class="eyebrow">05 — PUBLIKASI</p>
+          <h2>Gagasan yang dibagikan.</h2>
+        </div>
+        <p>Artikel, laporan, bahan ajar, dan publikasi yang dapat diakses pengunjung.</p>
+      </div>
+
+      <div class="container publication-grid">
+        <article class="publication-card">
+          <span>ARTIKEL</span>
+          <h3>Computational Thinking melalui Computer Science Unplugged</h3>
+          <p>Tambahkan abstrak singkat dan tautan artikel ketika publikasi siap.</p>
+          <a href="#kontak">Detail →</a>
+        </article>
+        <article class="publication-card">
+          <span>MEDIA PEMBELAJARAN</span>
+          <h3>Board Game Honey-Code the Rainforest Quest</h3>
+          <p>Dokumentasi konsep, desain, implementasi, dan hasil pengembangan.</p>
+          <a href="#karya">Detail →</a>
+        </article>
+        <article class="publication-card">
+          <span>BAHAN AJAR</span>
+          <h3>Perangkat Pembelajaran Informatika</h3>
+          <p>Ruang untuk modul, LKPD, asesmen, dan bahan pembelajaran yang dibagikan.</p>
+          <a href="#kontak">Detail →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section documentation" id="dokumentasi">
+      <div class="container">
+        <p class="eyebrow">06 — DOKUMENTASI</p>
+        <div class="section-heading">
+          <h2>Belajar, membuat, mencoba.</h2>
+          <p>Galeri ini nanti dapat diisi foto kegiatan pembelajaran, media, karya, dan proses pengembangan.</p>
+        </div>
+
+        <div class="gallery">
+          <div class="gallery-item large"><span>FOTO<br>PEMBELAJARAN</span></div>
+          <div class="gallery-item"><span>HONEY-CODE</span></div>
+          <div class="gallery-item"><span>MEDIA<br>PEMBELAJARAN</span></div>
+          <div class="gallery-item"><span>KEGIATAN</span></div>
+          <div class="gallery-item wide"><span>PROSES BERKARYA</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="kontak">
+      <div class="container contact-box">
+        <div>
+          <p class="eyebrow">07 — KONTAK</p>
+          <h2>Mari berbagi dan berkolaborasi.</h2>
+          <p>
+            Bagian ini dapat diisi dengan email profesional, profil sosial,
+            atau tautan lain yang ingin Anda tampilkan secara publik.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:emailanda@example.com">emailanda@example.com <span>↗</span></a>
+          <a href="#" aria-label="Tambahkan tautan profil">Profil profesional <span>↗</span></a>
+          <a href="#" aria-label="Tambahkan tautan karya">Karya & sumber belajar <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>DK</strong>
+        <span>Guru Informatika</span>
+      </div>
+      <p>Belajar · Berkarya · Berbagi</p>
+      <p>© <span id="year"></span> DK</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
